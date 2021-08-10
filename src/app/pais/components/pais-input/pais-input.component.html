@@ -1,0 +1,8 @@
+<form (ngSubmit)="Buscar()" autocomplete="off">
+    <input type="text"
+        name="termino"
+        placeholder="Buscar por país..."
+        class="form-control"
+        (input)="Precionada()"
+        [(ngModel)]="termino">
+</form>

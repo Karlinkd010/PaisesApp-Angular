@@ -6,6 +6,7 @@ import { PaisModule } from './pais/pais.module';
 
 import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
+import{HttpClientModule} from '@angular/common/http'
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { AppRoutingModule } from './app-routing.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     PaisModule,
     SharedModule
   ],

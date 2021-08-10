@@ -1,37 +1,11 @@
-<div class="row cointainer mt-4">
+<div class="row container mt-4">
   <div class="col-3">
-    <h2> Busquedas</h2>
-    <hr>
-    <ul class="list-gruop">
-      <li 
-        class="list-group-item"
-        routerLink=""
-        routerLinkActive="active"
-        [routerLinkActiveOptions]={exact:true}
-        >
-        Buscar País
-      </li>
-
-      <li 
-        class="list-group-item" 
-        routerLink="Region"
-        routerLinkActive="active"
-        >
-        Por Región
-      </li>
-
-      <li 
-        class="list-group-item" 
-        routerLink="Capital"
-        routerLinkActive="active"
-        >
-        Por Cápital
-      </li>
-    </ul>
+    <app-sidebar></app-sidebar>
+    
   </div>
+
   <div class="col">
-    <h2>Por region</h2>
-    <hr>
+
     <router-outlet></router-outlet>
   </div>
 </div>
