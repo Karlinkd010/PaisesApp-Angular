@@ -15,7 +15,7 @@
                 <img src="{{item.flag}}" alt="" class="small-flag">
 
             </td>
-            <td>{{item.name}}</td>
+            <td>{{item.capital }} , {{ item.name}}</td>
             <td>{{item.population | number}}</td>
             <td>
                 <a [routerLink]="['/Pais',item.alpha2Code]">Ver</a>

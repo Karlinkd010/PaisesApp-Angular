@@ -1,1 +1,54 @@
-<p>ver-pais works!</p>
+
+
+<div *ngIf="!pais; else divPais" class="d-flex align-items-center">
+    <strong>Cargando...</strong>
+    <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+  </div>
+
+<ng-template #divPais>        
+    <div class="row">
+        <div class="col">
+            <h1>País: <small>{{pais.name}}</small></h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <h3>Bandera</h3>
+            <img [src]="pais.flag" alt="" class="img-thumbnail">
+        </div>
+        <div class="col">
+            <h3>Información</h3>
+            <div class="list-group">
+                <li class="list-group-item">
+                    <strong>Población: </strong>{{pais.population | number}}
+                </li>
+                <li class="list-group-item">
+                    <strong>Código númerico: </strong>{{pais.numericCode}}
+                </li>
+                <li class="list-group-item">
+                    <strong>Código alpha: </strong>{{pais.alpha3Code}}
+                </li>
+            </div>
+        </div>
+    </div>
+    <h3>Traduciones</h3>
+    <div class="row">
+        <div class="col">
+            <span class="badge bg-primary mr-1">{{pais.translations.de}}</span>
+            <span class="badge bg-primary mr-1">{{pais.translations.es}}</span>
+            <span class="badge bg-primary mr-1">{{pais.translations.fr}}</span>
+            <span class="badge bg-primary mr-1">{{pais.translations.ja}}</span>
+            <span class="badge bg-primary mr-1">{{pais.translations.it}}</span>
+            <span class="badge bg-primary mr-1">{{pais.translations.br}}</span>
+            <span class="badge bg-primary mr-1">{{pais.translations.pt}}</span>
+            <span class="badge bg-primary mr-1">{{pais.translations.hr}}</span>
+            <span class="badge bg-primary mr-1">{{pais.translations.nl}}</span>
+            <span class="badge bg-primary mr-1">{{pais.translations.fa}}</span>
+            
+        </div>
+    </div>
+
+</ng-template>
+
+
+
