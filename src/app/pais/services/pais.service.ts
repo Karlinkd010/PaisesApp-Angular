@@ -22,18 +22,20 @@ export class PaisService {
 
   BuscarCapital(termino:string)
     :Observable<Country[]>{
-
     const url=`${this.apiUrl}/capital/${termino}`;
 
     return this.http.get<Country[]>(url);
   }
 
   verPaisId(id:string)
-  :Observable<Country>{
-
-  const url=`${this.apiUrl}/alpha/${id}`;
-
-  return this.http.get<Country>(url);
+    :Observable<Country>{
+      const url=`${this.apiUrl}/alpha/${id}`;
+      return this.http.get<Country>(url);
+  }
+  BuscarporRegion(region:string)
+  :Observable<Country[]>{
+    const url=`${this.apiUrl}/region/${region}`;
+    return this.http.get<Country[]>(url);
 }
 }
 
