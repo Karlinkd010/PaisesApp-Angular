@@ -9,8 +9,19 @@
         
         ></app-pais-input>
     </div>
-
 </div>
+<ul class="list-group">
+    <li *ngFor="let pais of paisSugerido"
+    class="list-group-item list-group-item-action">
+       <a href="" class="nav-link" 
+       [routerLink]="['/Pais',pais.alpha2Code]"
+       >
+       <img [src]="pais.flag" alt="" class="small-flag-url">
+       {{ pais.name}}
+
+       </a>
+    </li>
+</ul>
 
 <hr>
 
